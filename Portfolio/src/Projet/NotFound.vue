@@ -1,40 +1,48 @@
 <template>
-    <section class="Zone">
-      <!-- Espace supérieur -->
-      <div class="Espace1">
+
+<section class="Zone">
+
+   <!-- Espace supérieur -->
+   <div class="Espace1">
         <p>*</p>
+
       </div>
   
-      <!-- Contenu principal -->
+<!-- Contenu principal -->
       <aside>
         <!-- Image affichant l'erreur -->
-        <img src="./Illustrations/Message.png" alt="Erreur 404" />
-  
-        <!-- Message d'erreur -->
-        <p>
-          Bonjour. Il semblerait que la page cherchée n'existe pas. Nous nous excusons pour le désagrément causé. Veuillez donc revenir à la page d'accueil.
-          <!-- Bouton redirigeant vers la page d'accueil -->
-          <button @click="goToHome" title="Lien vers la page d'accueil.">Cliquez Ici</button>
-        </p>
-      </aside>
+
+  <img src="./Illustrations/Message.PNG" alt="Image de  la page 404">
+<!-- Message d'erreur -->
+<p>
+ 
+  Bonjour. 
+  Il semblerait que la page cherchée n'existe pas. 
+  Nous nous excusons pour le désagrément causé. Veuillez donc revenir à la page d'accueil.
+</p>  
+
+<RouterLink to="/"><span> Retour</span></RouterLink>
+
+
+
+  </aside>
   
       <!-- Espace inférieur -->
       <div class="Espace2">
         <p>*</p>
       </div>
+
 </section>
-  </template>
-  
-  <script setup>
-  // Utilisation de Vue.js pour gérer la redirection
-  const goToHome = () => {
-    // Redirection vers la page d'accueil
-    window.location.href = '/'; // Modifiez l'URL en fonction de votre configuration
-  };
-  </script>
-  
-  <style scoped>
-  .Zone {
+
+</template>
+
+<script setup>
+import { RouterLink } from "vue-router";
+
+</script>
+
+<style scoped>
+ .Zone {
     font-family: 'Calibri Light', Calibri, sans-serif; /* Police principale */
     font-size: 20px;
     font-weight: bold;
@@ -77,11 +85,12 @@
     opacity: 0;
   }
 
-  button{
+  span{
 
+    text-decoration: none;
     background-color: orange;
     color: white;
     font-weight: bold;
+
   }
-  </style>
-  
+</style>
