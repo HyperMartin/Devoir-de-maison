@@ -1,0 +1,32 @@
+/* ========================
+   ANIMATIONS
+======================== */
+
+/* Animation "Barrel Roll" - Effet de rotation pour les éléments */
+@keyframes barrel-roll {
+    from {
+        transform: rotate(0deg); /* Début sans rotation */
+    }
+    to {
+        transform: rotate(360deg); /* Rotation complète */
+    }
+}
+
+/* Application de l'animation sur le body avec une classe spécifique */
+body.barrel-roll {
+    animation: barrel-roll 2s ease-in-out; /* Animation fluide sur 2 secondes */
+}
+/* Réinitialisation des marges, paddings et modèle de boîte */
+* {
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les espaces internes */
+    box-sizing: border-box; /* Assure que padding et bordures sont inclus dans les dimensions */
+}
+
+/* Style global pour le texte et la structure */
+body {
+    font-family: 'Calibri Light', Calibri, sans-serif; /* Police principale */
+    width: 100%; /* Largeur de la page */
+    height: 100%; /* Hauteur de la page */
+    padding-top: 80px; /* Ajuste pour éviter de masquer le contenu sous le header */
+}
