@@ -21,26 +21,18 @@
   
   <script setup>
   // Utilisation de Vue's Composition API pour gérer la date dynamique
-  import { ref, onMounted } from 'vue';
+  import { ref} from 'vue';
   
   // Variable réactive pour stocker la date formatée
-  const formattedDate = ref('');
+  let formattedDate = ref('null');
   
-  // Fonction pour obtenir et formater la date actuelle
-  const updateDate = () => {
-    const now = new Date(); // Date actuelle
-    const day = String(now.getDate()).padStart(2, '0'); // Jour avec deux chiffres
-    const month = String(now.getMonth() + 1).padStart(2, '0'); // Mois avec deux chiffres (0-indexé)
-    const year = now.getFullYear(); // Année
-  
-    // Mise à jour de la variable réactive avec la date formatée
-    formattedDate.value = `${day}/${month}/${year}`;
-  };
-  
-  // Appeler la fonction pour définir la date au montage du composant
-  onMounted(() => {
-    updateDate();
-  });
+ formattedDate= new Date().toLocaleDateString('fr-FR', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour:'numeric'
+        });
+
   </script >
   
   <style scoped>

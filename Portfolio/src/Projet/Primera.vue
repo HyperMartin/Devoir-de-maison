@@ -67,6 +67,8 @@
        text-decoration: none;/*Stopper les soulignements*/
    }
    
+ 
+
    /* Effet au survol des liens */
     nav ul li a:hover {
        background-color: white; /* Fond blanc */
