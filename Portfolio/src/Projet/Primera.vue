@@ -9,7 +9,7 @@
    <section class="Phase0">
        <!-- Logo cliquable renvoyant à l'ancre "Zen" en haut de la page -->
        <a href="#Zen">
-<img src="./Illustrations/Roll.PNG">
+<img src="./Illustrations/Roll.PNG" alt="Logo de la page">
        </a>
    
        <!-- Titre principal du portfolio -->

@@ -11,9 +11,9 @@
     </main>
 
     <!-- Affichage du contenu des routes -->
-    <main v-else>
+    <div v-else>
       <RouterView />
-    </main>
+    </div>
 
     <!-- Footer (Tercero) affiché uniquement si la route est "home" -->
     <footer v-if="home">

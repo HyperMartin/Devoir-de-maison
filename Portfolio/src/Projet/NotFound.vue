@@ -1,18 +1,20 @@
 <template>
 
-<section class="Zone">
+<!-- Début de la page et importation de Primera -->
+<header>  <Primera /></header>
 
-   <!-- Espace supérieur -->
-   <div class="Espace1">
-        <p>*</p>
-
-      </div>
-  
 <!-- Contenu principal -->
-      <aside>
-        <!-- Image affichant l'erreur -->
 
-  <img src="./Illustrations/Message.PNG" alt="Image de  la page 404">
+<main>  
+  
+ <aside class="Zone">
+
+     
+<!-- Image affichant l'erreur -->
+
+ <img src="./Illustrations/Message.PNG" alt="Image de  la page 404">
+
+
 <!-- Message d'erreur -->
 <p>
  
@@ -21,76 +23,79 @@
   Nous nous excusons pour le désagrément causé. Veuillez donc revenir à la page d'accueil.
 </p>  
 
+
+<!-- Lien vers App.vue-->
+
 <RouterLink to="/"><span> Retour</span></RouterLink>
 
+ </aside>
+
+</main>
 
 
-  </aside>
+<!-- Fin de la page et importation de Tercero-->
+
+<footer>
+
+  <Tercero />
+
+</footer>
   
-      <!-- Espace inférieur -->
-      <div class="Espace2">
-        <p>*</p>
-      </div>
-
-</section>
-
 </template>
 
-<script setup>
-import { RouterLink } from "vue-router";
 
+<!-- Partie programmation pour les liens entre les fichiers-->
+
+<script>
+  // Importation du composant `RouterLink` depuis Vue Router
+  // Il permet de créer des liens entre les routes dans une application Vue.js
+  import { RouterLink } from "vue-router";
+
+  // Importation des composants locaux
+  // Ces composants peuvent être utilisés dans ce composant Vue
+  import Primera from "./Primera.vue"; // Composant `Primera`, défini dans le fichier `Primera.vue`
+  import Tercero from "./Tercero.vue"; // Composant `Tercero`, défini dans le fichier `Tercero.vue`
+
+  export default {
+    // Nom du composant Vue
+    name: "NotFound",
+
+    // Définition des composants.
+    components: {
+      Primera, // Associe le composant importé `Primera` au template
+      Tercero, // Associe le composant importé `Tercero` au template
+    },
+  };
 </script>
 
+
+
 <style scoped>
- .Zone {
-    font-family: 'Calibri Light', Calibri, sans-serif; /* Police principale */
-    font-size: 20px;
-    font-weight: bold;
+
+.Zone {
+    font-family: 'Calibri Light', Calibri, sans-serif; /* Définit une police principale avec des alternatives en cas d'indisponibilité */
+    font-size: 20px; /* Taille du texte en pixels */
+    font-weight: bold; /* Met le texte en gras */
+    margin: 40px; /* Ajoute un espacement externe autour de la zone */
   }
-  
-  .Espace1 {
-    background: #f12711; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #f5af19, #f12711); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    width: 100%;
-    height: 210px;
-    position: relative;
-    top: -80px;
-  }
-  
-  .Espace1 p {
-    opacity: 0; /* Rendre les éléments complètement invisibles */
-  }
-  
- 
+
+  /* Style pour les images dans les balises <aside> */
   aside img {
-    width: 300px;
-    height: 300px;
-    margin: 80px;
-    position: relative;
-    left: 460px;
-  }
-  
-  .Espace2 {
-    background: #f12711; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #f5af19, #f12711); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    width: 100%;
-    height: 210px;
-    position: relative;
-    top: 80px;
-  }
-  
-  .Espace2 p {
-    opacity: 0;
+    width: 300px; /* Largeur fixe de l'image en pixels */
+    height: 300px; /* Hauteur fixe de l'image en pixels */
+    margin: 80px; /* Ajoute un espacement externe autour de l'image */
+    position: relative; /* Permet de positionner l'image par rapport à sa position normale */
+    left: 460px; /* Décale l'image de 460 pixels vers la droite */
   }
 
-  span{
-
-    text-decoration: none;
-    background-color: orange;
-    color: white;
-    font-weight: bold;
-
+  /* Style pour les balises <span> */
+  span {
+    text-decoration: none; /* Supprime toute décoration (comme les soulignements) */
+    background-color: orange; /* Définit une couleur de fond orange */
+    color: white; /* Définit une couleur de texte blanche */
+    font-weight: bold; /* Rend le texte en gras */
   }
 </style>
+
+
+

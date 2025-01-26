@@ -1,4 +1,5 @@
 <template>
+
     <section class="Dernier"> 
       <!-- Ancre pour la navigation -->
       <p id="reseaux">* </p>
@@ -17,6 +18,7 @@
       <!-- Affichage dynamique de la date de dernière mise à jour -->
       <p>Dernière mise à jour : {{ formattedDate }}</p>
     </section>
+    
   </template>
   
   <script setup>
@@ -26,6 +28,7 @@
   // Variable réactive pour stocker la date formatée
   let formattedDate = ref('null');
   
+  // Date de mise à jour.
  formattedDate= new Date().toLocaleDateString('fr-FR', {
             year: 'numeric',
             month: 'long',

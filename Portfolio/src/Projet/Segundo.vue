@@ -47,93 +47,12 @@ Parallèlement, j’ai acquis trois certifications en programmation, attestant d
 
 <br />
 
-
-<!-- Fond noir semi-transparent affiché si un modal est ouvert -->
-<div v-if="open || open2 ||open3" class="backdrop"></div>
-
-
   <!-- Les modals -->
 
 <aside class="Réalisations">
 
-<!-- Premier modal -->
+  <Modal0 />
 
-
-<!-- Image cliquable pour ouvrir la modal -->
-
-  <button @click="open = true" ><img src="./Illustrations/Une.PNG" alt="Projet 1"></button>
-
-  
-  <div v-if="open" class="modal">
-<!-- Titre du projet -->
-
-<h2>Devoir sur le CV :</h2>
-
-<!-- Lien vers le projet -->
-
-<a href="https://github.com/SuperBarto/Renage.git" target="_blank">Voir le projet</a>
-
-<!-- Description du projet -->
-<p>Ce projet a été réalisé avec les langages Html et Css en juillet 2024.</p>
-
- <!-- Image illustrant le projet -->
-<img src="./Illustrations/SuperLe.PNG" alt="Projet 1">
-
-<!-- Bouton pour fermer la modal -->
-
-<button @click="open = false" class="close-button">Fermer</button>
-
-  </div>
-
-
-
-<!-- Deuxième modal -->
-  <button @click="open2 = true">  <img src="./Illustrations/Deux.jpg" alt="Projet 2">
-  </button>
-
-<div v-if="open2" class="modal">
-
-<!-- Titre du projet -->
-<h2>Devoir sur le cahier des charges :</h2>
-      
- <!-- Lien vers le projet -->
-<a href="https://github.com/SuperBarto/Cahier-des-charges.git" target="_blank">Voir le projet</a>
-
- <!-- Description du projet -->
- <p>Ce projet est un document PDF, il a été fait avec Microsoft Word en octobre 2024.</p>
-
-<!-- Image illustrant le projet -->
-<img src="./Illustrations/Charges.PNG" alt="Projet 2">
-
- 
-<!-- Bouton pour fermer la modal -->
-
-    <button @click="open2 = false" class="close-button">Fermer</button>
-
-  </div>
-
-
-    <!-- Troisième modal -->
-
-<button @click="open3 = true"> <img src="./Illustrations/Trois.png" alt="Projet 3">
-</button>
-
-
-<div v-if="open3" class="modal">
-<!-- Titre du projet -->
-<h2>Devoir sur les commentaires dynamiques :</h2>
-      
-<!-- Lien vers le projet -->
-<a href="https://github.com/HyperMartin/DEVOIR-SUR-LE-FORMULAIRE.git" target="_blank">Voir le projet</a>
-     
-<!-- Description du projet -->
-<p>Ce projet a été fait avec les langages Html, JavaScript et Css, il date de décembre 2024.</p>
-     
-<!-- Image illustrant le projet -->
-<img src="./Illustrations/Formu.PNG" alt="Projet 3"> 
-
-<button @click="open3 = false" class="close-button">Fermer</button>
-</div>
 
 </aside>
 
@@ -177,14 +96,12 @@ Parallèlement, j’ai acquis trois certifications en programmation, attestant d
 
 
 
+<!-- Modals Phase 2-->
 
 <script setup>
-import { ref } from 'vue';
+import Modal0 from './Modal0.vue';
 
-// États pour gérer l'ouverture des modals
-const open = ref(false);
-const open2 = ref(false);
-const open3=ref(false);
+
 </script>
 
 
@@ -234,34 +151,9 @@ const open3=ref(false);
   }
   
   
-  /* Styles pour le fond noir */
-    .backdrop {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: black; /* Fond noir */
-      z-index: 1001; /* Derrière le modal mais devant le reste */
-
-    }
+ 
     
-  .modal {
-  position: fixed; /* Position fixe pour le garder au même endroit même lors du défilement */
-  top: 50%; /* Centre verticalement */
-  left: 50%; /* Centre horizontalement */
-  transform: translate(-50%, -50%); /* Ajuste le positionnement au centre */
-  width: 550px; /* Largeur du modal */
-  height: 550px; /* Hauteur du modal */
-  padding: 20px; /* Espacement interne */
-  background-color: white; /* Fond blanc */
-  border-radius: 8px; /* Coins arrondis */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre */
-  z-index: 1500; /* Superposition maximale */
-}
-
-    
-     /* Titre de la section projets */
+     /* Titre de la section projets  et style pour le texte*/
      .Phase2 h2 {
         color: red; /* Couleur du titre */
         text-decoration: underline; /* Soulignement */
@@ -270,80 +162,7 @@ const open3=ref(false);
      
       p{ font-weight: bold;}
       
-      /* Galerie de projets */
-.Réalisations button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Animation fluide */
-}
 
-.Réalisations button:hover {
-  box-shadow: 4px 4px #0000006b; /* Ombre vers le bas et à droite */
-  transform: translate(2px, 2px); /* Déplace légèrement le bouton pour un effet visuel */
-
-
-}  
-
-
-    
-      button img {
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        margin: 10px;
-        padding: 20px;
-      }
-    
-    /* Images dans le modal */
-    .modal img {
-        width: 90%;
-        height: 340px;
-        border-radius: 7%;
-        margin: 20px;
-        
-    
-      }
-    
-    
-      /* Bouton de fermeture */
-.close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: transparent;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-  color: #e0115f;
-
-  /* Supprime les animations et effets */
-  box-shadow: none !important; /* Pas d'ombre */
-  transform: none !important; /* Pas de translation */
-  transition: none !important; /* Pas d'animation */
-}
-
-    
-      /* Liens vers les projets */
-      .modal a {
-        display: inline-block;
-        margin-top: 10px;
-        text-decoration: none;
-        color: orange;
-        font-weight: bold;
-      }
-      
-      .modal a:hover {
-        color: #0056b3;
-      }
-      
-      .modal h2{
-      
-        text-decoration: underline;
-        color: blue;
-      }
-  
 
   /* ========================
    FORMULAIRE DE CONTACT (Phase3)
