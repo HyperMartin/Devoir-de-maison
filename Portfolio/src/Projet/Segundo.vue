@@ -110,7 +110,7 @@ import Modal0 from './Modal0.vue';
 
  /* Espacement des sections */
  section {
-    margin-top: 20px; /* Espacement supérieur */
+    margin-top: 20px; /* Espacement externe */
     padding: 25px; /* Espacement interne */
   }
   
@@ -127,23 +127,23 @@ import Modal0 from './Modal0.vue';
   
   /* Image de présentation */
   .Phase1 img {
-    width: 270px; /* Largeur fixe */
+    width: 270px; /* Largeur  */
     border-radius: 30%; /* Coins arrondis */
-    margin: 20px 0; /* Espacement vertical */
+    margin: 20px 0; /* Espacement  */
   }
   
   /* Texte descriptif */
   .Phase1 p {
     font-weight: bold; /* Texte en gras */
     text-align: justify; /* Alignement justifié */
-    margin-bottom: 20px; /* Espacement en bas */
+    margin-bottom: 20px; /* Espacement  */
   }
   
   /* Liste des certifications */
   .Phase1 ul {
     color: #00dbde; /* Couleur du texte */
     font-weight: bold; /* Texte en gras */
-    margin-left: 20px; /* Décalage à gauche */
+    margin-left: 20px; /* Décalage */
   }
   
   .Phase1 ul li {
@@ -170,19 +170,19 @@ import Modal0 from './Modal0.vue';
   
   /* Conteneur principal du formulaire */
   .Phase3 form {
-    display: flex; /* Flexbox pour aligner les champs verticalement */
-    flex-direction: column; /* Orientation verticale */
+    display: flex; /* Flexbox  */
+    flex-direction: column; /* Orientation  */
     background-color: white; /* Fond blanc */
     padding: 20px; /* Espacement interne */
     border-radius: 10px; /* Coins arrondis */
-    width: 90%; /* Largeur relative */
+    width: 90%; /* Largeur  */
     max-width: 600px; /* Largeur maximale */
-    margin: 20px ; /* Centre horizontalement */
+    margin: 20px ; /* Espace externe */
   }
   
   /* Les labels des champs */
   .Phase3 label {
-    margin-bottom: 8px; /* Espacement sous chaque label */
+    margin-bottom: 8px; /* Espacement  */
     font-weight: bold; /* Texte en gras */
     color: #333; /* Couleur du texte */
   }
@@ -190,7 +190,7 @@ import Modal0 from './Modal0.vue';
   /* Les champs de texte */
   .Phase3 input,
   .Phase3 textarea {
-    margin-bottom: 15px; /* Espacement entre les champs */
+    margin-bottom: 15px; /* Espacement */
     padding: 10px; /* Espacement interne */
     border: 1px solid #ccc; /* Bordure grise */
     border-radius: 5px; /* Coins arrondis */
@@ -200,7 +200,7 @@ import Modal0 from './Modal0.vue';
   /* Champ de texte spécifique pour les messages */
   .Phase3 textarea {
     resize: none; /* Désactive le redimensionnement */
-    height: 300px; /* Hauteur fixe */
+    height: 300px; /* Hauteur  */
     width: 700px;/*Largeur*/
   }
   
@@ -213,7 +213,6 @@ import Modal0 from './Modal0.vue';
     border-radius: 5px; /* Coins arrondis */
     font-size: 16px; /* Taille du texte */
     cursor: pointer; /* Curseur en main */
-    transition: background-color 0.3s ease; /* Transition fluide */
   }
   
   /* Effet au survol du bouton */
@@ -228,7 +227,7 @@ import Modal0 from './Modal0.vue';
   .Phase3 h2 {
     color: green; /* Couleur verte pour le titre */
     text-decoration: underline; /* Soulignement pour distinguer le titre */
-    margin-bottom: 20px; /* Espacement inférieur */
+    margin-bottom: 20px; /* Espacement */
     text-align: left; /* Gauche */
   }
   
@@ -237,8 +236,8 @@ import Modal0 from './Modal0.vue';
   #projets, 
   #presentation {
     opacity: 0; /* Rendre les éléments complètement invisibles */
-    margin: 30px; /* Ajouter un espacement externe de 30px pour conserver leur position */
-    padding: 30px; /* Ajouter un espacement interne de 30px pour garder une taille définie */
+    margin: 30px; /* Ajouter un espacement externe de 30px  */
+    padding: 30px; /* Ajouter un espacement interne de 30px  */
   }
 
 </style>

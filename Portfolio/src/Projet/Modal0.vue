@@ -1,8 +1,8 @@
 <template>
 
   <div>
-    <!-- Fond noir semi-transparent affiché si une modale est ouverte -->
-    <!-- La classe "backdrop" est affichée lorsque `activeModal` n'est pas null -->
+    <!-- Fond noir affiché si une modale est ouverte -->
+    <!-- La classe "backdrop" est affichée lorsque `activeModal` n'est pas nulle -->
     <div v-if="activeModal !== null" class="backdrop"></div>
 
     <!-- Conteneur principal des projets -->
@@ -91,21 +91,12 @@
 <style scoped>
 /* Conteneur principal pour les projets */
 .projects {
-  display: flex; /* Active le modèle Flexbox pour aligner les projets */
+  display: flex; /*  Flexbox  */
   flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
   gap: 20px; /* Espacement entre les éléments du conteneur */
 }
 
-/* Style pour le fond noir semi-transparent affiché derrière une modale */
-.backdrop {
-  position: fixed; /* Fixe le fond noir par rapport à la fenêtre */
-  top: 0; /* Positionné en haut de la fenêtre */
-  left: 0; /* Positionné à gauche de la fenêtre */
-  width: 100%; /* Couvre toute la largeur de l'écran */
-  height: 100%; /* Couvre toute la hauteur de l'écran */
-  background-color: rgba(0, 0, 0, 0.5); /* Fond noir avec une opacité de 50% */
-  z-index: 998; /* Niveau d'empilement pour être derrière la modale */
-}
+
 
 /* Styles pour les images dans les boutons */
 button img {

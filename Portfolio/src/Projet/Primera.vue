@@ -1,5 +1,5 @@
 <template>          
-    <!-- Menu latéral ou élément décoratif -->
+    <!-- Début du code-->
     <aside>
        <!-- Élément d'ancrage pour permettre de revenir au haut de la page -->
        <p id="Zen">* </p>
@@ -77,18 +77,19 @@
    
    /* Effet lumineux sur l'image du header */
     img {
-       width: 100px; /* Ajustez la taille selon vos besoins */
+       width: 100px; /* Largeur*/
        height: 100px;/*Hauteur*/
        border-radius: 50%; /* Rend l'image circulaire */
        box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.5); /* Lumière autour */
-       background-color: #000; /* Couleur de fond pour les images transparentes */
-       transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effet fluide */
+       
    }
    
     img:hover {
        transform: scale(1.1); /* Agrandit légèrement l'image */
        box-shadow: 0 0 30px 15px rgba(255, 255, 255, 0.7); /* Accentue la lumière */
    }
+
+   /*Invisibilité*/
    #Zen{
     opacity: 0;
    }

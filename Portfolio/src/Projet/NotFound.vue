@@ -84,13 +84,12 @@
     width: 300px; /* Largeur fixe de l'image en pixels */
     height: 300px; /* Hauteur fixe de l'image en pixels */
     margin: 80px; /* Ajoute un espacement externe autour de l'image */
-    position: relative; /* Permet de positionner l'image par rapport à sa position normale */
+    position: relative; /* Position */
     left: 460px; /* Décale l'image de 460 pixels vers la droite */
   }
 
   /* Style pour les balises <span> */
   span {
-    text-decoration: none; /* Supprime toute décoration (comme les soulignements) */
     background-color: orange; /* Définit une couleur de fond orange */
     color: white; /* Définit une couleur de texte blanche */
     font-weight: bold; /* Rend le texte en gras */

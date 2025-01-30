@@ -25,7 +25,7 @@
   // Utilisation de Vue's Composition API pour gérer la date dynamique
   import { ref} from 'vue';
   
-  // Variable réactive pour stocker la date formatée
+  // Variable réactive pour stocker la date 
   let formattedDate = ref('null');
   
   // Date de mise à jour.
@@ -70,7 +70,6 @@
     width: 50px; /* Taille des icônes */
     height: 50px; /* Taille proportionnelle */
     border-radius: 30%; /* Coins arrondis */
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Transition fluide au survol */
   }
   
   .Dernier img:hover {

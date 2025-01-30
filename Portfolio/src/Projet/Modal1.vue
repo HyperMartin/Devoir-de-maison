@@ -31,7 +31,7 @@
 
   // Définition des props
   // Ces props permettent au composant de recevoir des données dynamiques depuis le composant parent.
-  defineProps({
+  const props = defineProps({
     isOpen: Boolean, // Contrôle si la modale est ouverte ou fermée (true/false)
     title: String, // Titre du projet à afficher dans la modale
     link: String, // URL du projet à afficher sous forme de lien
@@ -97,7 +97,6 @@
   padding: 20px; /* Espacement interne */
   background-color: white; /* Fond blanc */
   border-radius: 8px; /* Coins arrondis */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre */
   z-index: 1500; /* Superposition maximale */
   border: 12px solid silver;
 
